@@ -56,7 +56,7 @@
          var getSongIndex = function(song) {
               return currentAlbum.songs.indexOf(song);
          };
-
+         
          /**
          * @desc Active song object from list of songs
          * @type {Object}
@@ -68,6 +68,12 @@
          * @type {Number}
          */
          SongPlayer.currentTime = null;
+         
+         /**
+         * @desc volume (in percentile) of currently playing song
+         * @type {Number}
+         */
+         SongPlayer.volume = 80;
          
          /**
          * @function play
@@ -155,6 +161,12 @@
          SongPlayer.setCurrentTime = function(time) {
              if (currentBuzzObject) {
                  currentBuzzObject.setTime(time);
+             }
+         };
+         
+         SongPlayer.setVolume = function(volume) {
+             if (currentBuzzObject) {
+                 currentBuzzObject.setVolume(volume);
              }
          };
          
