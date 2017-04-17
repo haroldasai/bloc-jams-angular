@@ -33,6 +33,13 @@
                      SongPlayer.currentTime = currentBuzzObject.getTime();
                  });
              });
+             
+             currentBuzzObject.bind('volumechange', function() {
+                 $rootScope.$apply(function() {
+                     SongPlayer.volume = currentBuzzObject.getVolume();
+                 });
+             });
+             
 
              SongPlayer.currentSong = song;
          };
@@ -73,7 +80,7 @@
          * @desc volume (in percentile) of currently playing song
          * @type {Number}
          */
-         SongPlayer.volume = 80;
+         SongPlayer.volume = null;
          
          /**
          * @function play
