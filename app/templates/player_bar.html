@@ -17,6 +17,17 @@
              <a class="next" ng-click="playerBar.songPlayer.next()">
                  <span class="ion-skip-forward"></span>
              </a>
+             <!--autoplay feature----------------->
+             <div class="auto-play">
+                 <span class="autoplay-text">autoplay</span>
+                 <span>
+                     <label class="switch">
+                         <input type="checkbox" ng-checked="playerBar.songPlayer.autoPlayOn" ng-click="playerBar.songPlayer.autoPlayOn = !playerBar.songPlayer.autoPlayOn">
+                         <div class="slider round"></div>
+                     </label>
+                 </span>
+             </div>
+             <!--autoplay feature----------------->
          </div>
          <div class="control-group currently-playing">
              <h2 class="song-name">{{playerBar.songPlayer.currentSong.title}}</h2>
