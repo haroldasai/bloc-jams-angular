@@ -28,6 +28,8 @@
                  preload: true
              });
 
+             SongPlayer.muteOn = false;
+
              currentBuzzObject.bind('timeupdate', function() {
 
                  //call autoPlay() if auto-play slider is on
@@ -92,6 +94,17 @@
          SongPlayer.volume = null;
 
          SongPlayer.autoPlayOn = false;
+
+         SongPlayer.muteOn = false;
+
+         /**
+         * @function setFirstSong
+         * @desc set first song of the album on page load.
+         * @param {Object} album
+         */
+         SongPlayer.setFirstSong = function(album) {
+             setSong(album.songs[0]);
+         };
 
          /**
          * @function play
@@ -200,6 +213,26 @@
          SongPlayer.setVolume = function(volume) {
              if (currentBuzzObject) {
                  currentBuzzObject.setVolume(volume);
+             }
+         };
+
+         SongPlayer.getCurrentVolume = function() {
+             if (currentBuzzObject) {
+                 return currentBuzzObject.getVolume();
+             }
+         };
+
+         SongPlayer.setMute = function() {
+             if (currentBuzzObject) {
+                 SongPlayer.muteOn = true;
+                 currentBuzzObject.mute();
+             }
+         };
+
+         SongPlayer.setUnMute = function() {
+             if (currentBuzzObject) {
+                 SongPlayer.muteOn = false;
+                 currentBuzzObject.unmute();
              }
          };
 
