@@ -1,7 +1,14 @@
  body.landing {
      background-color: rgb(58,23,63);
  }
- 
+
+ .navbar_logo {
+     height: 25%;
+     width: 25%;
+     margin-top: 15px;
+     margin-bottom: 5px;
+ }
+
  .hero-content {
      position: relative;
      min-height: 600px;
@@ -10,7 +17,7 @@
      background-position: center center;
      background-size: cover;
  }
- 
+
  .hero-content .hero-title {
      position: absolute;
      top: 40%;
@@ -25,11 +32,11 @@
      letter-spacing: 0.5rem;
      text-shadow: 1px 1px 0px rgb(58,23,63);
  }
- 
+
  .selling-points {
      position: relative;
  }
- 
+
  .point {
      position: relative;
      padding: 2rem;
@@ -43,13 +50,13 @@
      transition: all 0.25s ease-in-out;
      -webkit-transition-delay: 0.2s;
      -moz-transition-delay: 0.2s;
-     /*transition-delay: 0.2s;*/     
+     /*transition-delay: 0.2s;*/
  }
- 
+
  .point .point-title {
      font-size: 1.25rem;
  }
- 
+
  .ion-music-note,
  .ion-radio-waves,
  .ion-iphone {

@@ -3,6 +3,7 @@
          var SongPlayer = {};
 
          var currentAlbum = Fixtures.getAlbum();
+         var currentVolume = 80;
          /**
          * @desc Buzz object audio file
          * @type {Object}
@@ -16,6 +17,7 @@
          */
          var setSong = function(song) {
              if (currentBuzzObject) {
+                 currentVolume = currentBuzzObject.getVolume();
                  stopSong(SongPlayer.currentSong);
                  /*
                  currentBuzzObject.stop();
@@ -24,8 +26,9 @@
              }
 
              currentBuzzObject = new buzz.sound(song.audioUrl, {
-                 formats: ['mp3'],
-                 preload: true
+                 formats: ['wav'],
+                 preload: true,
+                 volume: currentVolume
              });
 
              SongPlayer.muteOn = false;
