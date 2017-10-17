@@ -16,7 +16,7 @@
                  { title: 'Twilight', duration: 303, audioUrl: 'assets/music/puerta/Twilight' },
                  { title: 'Whats the use', duration: 245, audioUrl: 'assets/music/puerta/Whats the use' },
                  { title: 'Nice and Slow', duration: 201, audioUrl: 'assets/music/puerta/Nice and Slow' },
-                 { title: 'Leave them far behined', duration: 76, audioUrl: 'assets/music/puerta/Leave them far behined' },
+                 { title: 'Leave them far behined', duration: 76, audioUrl: 'assets/music/puerta/Leave them far behind' },
                  { title: 'Waste no Time', duration: 283, audioUrl: 'assets/music/puerta/Waste no Time' }
              ]
          };
